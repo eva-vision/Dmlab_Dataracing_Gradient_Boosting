@@ -1,12 +1,12 @@
 # About Dmlab's Dataracing Competition
 Improve your data science skills by solving a real business problem and be part of the Dataracing data science competition. Predict in the most accurate way on the Hungarian retail loan dataset which borrowers will have a defaulted loan. Take home one of the prizes for the best solutions. The competition, jointly organised by the Magyar Nemzeti Bank, the central bank of Hungary (MNB) and the Budapest University of Technology and Economics (BME), aims to create a platform for professional development and connectivity for the Hungarian data science community. Learn, grow, build relationships and help make better decisions with data.
 
-#Dataracing 2023 overview
+# Dataracing 2023 overview
 The Dataracing 2023 competition focuses on domestic lending data and defaults, looking at how predictable it is for a borrower to default on a loan. For this task, the anonymised and distorted data is provided by the co-organiser of the competition, the Hungarian National Bank. The aim of the data analysis is to predict as accurately as possible whether a customer is likely to default on a loan in the two years following the period covered by the data.
 
 How predictable is this classification exercise? What are the appropriate testing and sampling methods, how should the target variable be generated if the output data set used for training and the data set considered for evaluation are separated in time? What machine learning methods can be used to solve the given problem if each debtor has already undergone a loan evaluation process once and was expected to repay his/her loan? These and similar questions are the ones the Dataracing 2023 competition is looking for answers to, and you can help answer them by taking part in the competition. Cash prizes will be paid to the top three solution providers.
 
-#About the dataset
+# About the dataset
 For Dataracing 2023, we will publish a single dataset instead of the usual training and test datasets used for competitions. This dataset shows the lending data for a period of almost three years. The loan contracts are characterised by the fact that they are linked to many types of loan products: housing loans, commodity loans, open-end loans and even credit card contracts. One common feature of these loans is that they have been contracted over a three-year period. The contract date, the amount, the length of the term, the interest period, the corresponding repayment and so on are known. Typically the values are distorted in accordance with anonymisation requirements. The fields in the data set prefixed 'CONTRACT_' contain the data that can be linked to the contract.
 
 Of course, a loan agreement must have at least one borrower. There is less information available on this borrower, the variables related to it are shown in the fields prefixed "BORROWER_". We have his anonymized data on age, income, and place of residence. It is important to note that a credit contract can have several and different types of counterparties. This is represented in the dataset in such a way that the same credit contract is represented by as many rows as there are individuals associated with it. On the other hand, the identifier of the contracting parties may appear in more than one credit contract, so that it is possible to see if someone has signed more than one contract in a given three-year period. The data are characterised by some changes and inconsistencies in the new rows added for the same contract due to contracting parties with attributes related to the contract. For example, it may be the case that for a loan contract with two borrowers, CONTRACT_DATE_OF_LOAN_AGREEMENT is different.
@@ -17,7 +17,7 @@ Unusually for data science competitions, no test data was provided to the partic
 
 To help you in your work, the identifiers of the customers concerned are included in the sample submission dataset (sample_submission.csv). Similarly, we feel it is important to share with the competitors the information that 1.48% of the affected borrowers defaulted over the two-year period. This information is important because, compared to the period of the data set released, the next two years could contain a significant wave of loan defaults, and concealing this information would not be in favour of the competitor using the best forecasting methodology. Consider the data as some level of expert estimation of the credit default events in the near future.
 
-#Results
+# Results
 {"Logloss": 0.07150054082587104, "ROCAUC": 0.9091495780827563}
 Enough only for the not too prestigious 70th place.
 
